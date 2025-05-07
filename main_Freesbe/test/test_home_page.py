@@ -139,3 +139,4 @@ def test_blog_component(driver):
     Blog_page = Blog_Component(driver)
     Blog_page.navigate_to_blog_page()
     driver.implicitly_wait(2)
+    # hapel zona!!!
