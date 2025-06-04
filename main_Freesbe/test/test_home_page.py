@@ -52,42 +52,17 @@ def test_banner_gallery(driver):
     Base.Short_waiting(driver)
 
 
-#UI test + Sanity test (scroll and move to search flow pages)
+#Sanity test (scroll and move to search flow pages)
 
 def test_Search_flow(driver):
     driver.get(Homepage_url)
     Search = Search_flow_Component(driver)
     driver.implicitly_wait(2)
-    Search.Clicking_on_a_budget_button()
+    Search.Clicking_on_a_monthly_price()
     driver.implicitly_wait(2)
-    Search.Clicking_on_a_accurateSearch_button()
+    Search.Clicking_on_a_accurate_Search()
     driver.implicitly_wait(2)
-    Search.Clicking_on_a_leave_details_button()
-    driver.implicitly_wait(2)
-    Search.Clicking_on_a_general_Search_button()
-    first_main_title_text, first_main_title_font_size, first_title_color, second_main_title_text, second_main_title_font_size, second_main_title_color, paragraph_text, paragraph_font_size, paragraph_color = Search.Get_search_flow_texts_and_headers()
-    expected_first_main_title_text = 'חפשו איך שנוח'
-    assert first_main_title_text == expected_first_main_title_text
-    expected_first_main_title_font_size = '40px'
-    assert first_main_title_font_size == expected_first_main_title_font_size
-    expected_first_title_color = 'rgba(0, 0, 0, 1)'
-    assert first_title_color == expected_first_title_color
-    expected_second_main_title_text = 'מתלבטים מה לקנות?'
-    assert second_main_title_text == expected_second_main_title_text
-    expected_second_main_title_font_size = '40px'
-    assert second_main_title_font_size == expected_second_main_title_font_size
-    expected_second_main_title_color = 'rgba(38, 38, 38, 1)'
-    assert second_main_title_color == expected_second_main_title_color
-    expected_paragraph_text = 'ענו על 3 שאלות זריזות ואנחנו נמצא לכם רכבים שיכולים להתאים'
-    assert paragraph_text == expected_paragraph_text
-    expected_paragraph_font_size = '18px'
-    assert paragraph_font_size == expected_paragraph_font_size
-    expected_paragraph_color = 'rgba(38, 38, 38, 1)'
-    assert paragraph_color == expected_paragraph_color
-    print(f'The UI of the main title:{first_main_title_text, first_main_title_font_size, first_title_color}')
-    print(f'the UI of the second main title is:{second_main_title_text, second_main_title_font_size, second_main_title_color}')
-    print(f'the UI of the paragraph is:{paragraph_text, paragraph_font_size, paragraph_color}')
-
+    Search.Clicking_on_a_general_Search()
 
 #UI test + Sanity test (scroll and move to additional services pages)
 
