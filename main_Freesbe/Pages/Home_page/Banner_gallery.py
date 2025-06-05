@@ -12,7 +12,7 @@ from imports import *
 #    def verify_Banner_carousel(self):
 #        First_banner = self.Banner_gallery_locators()
 #        print('verify_Banner_carousel start')
-#        self.driver.implicitly_wait(10)
+#       Base.long_waiting(self)
 #        Base.scrolling(self, First_banner)
 #        First_banner.click()
 #        Base.long_waiting(self)

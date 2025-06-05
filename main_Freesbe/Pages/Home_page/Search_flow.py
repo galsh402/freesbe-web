@@ -15,7 +15,7 @@ class Search_flow_Component:
     def Clicking_on_a_monthly_price(self):
         Search_flow_main_title, monthly_price, accurate_search, general_Search = self.Search_flow_locators()
         print('Clicking_on_a_monthly_price start')
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         Base.scrolling(self, monthly_price)
         Base.long_waiting(self)
         monthly_price.click()
@@ -29,7 +29,7 @@ class Search_flow_Component:
     def Clicking_on_a_accurate_Search(self):
         Search_flow_main_title, monthly_price, accurate_search, general_Search = self.Search_flow_locators()
         print('Clicking_on_a_accurateSearch_button start')
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         Base.scrolling(self, accurate_search)
         accurate_search.click()
         Base.long_waiting(self)

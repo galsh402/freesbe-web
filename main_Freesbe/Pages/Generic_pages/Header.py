@@ -18,7 +18,7 @@ class Header_Component:
     def Clicking_on_a_New_lobby_button(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, Rental_web, Solutions_page, My_leasing_web, Contact_us_page, wishlist_page = self.Header_locators()
         print('Clicking_on_a_New_lobby_button start')
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         New_car_lobby.click()
         Base.long_waiting(self)
         expected_new_lobby_url = "https://freesbe.com/new-car-for-sale"
@@ -30,7 +30,7 @@ class Header_Component:
     def Clicking_on_a_private_leasing_lobby_button(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, Rental_web, Solutions_page, My_leasing_web, Contact_us_page, wishlist_page = self.Header_locators()
         print('Clicking_on_a_private_leasing_lobby_button start')
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         Leasing_car_lobby.click()
         Base.long_waiting(self)
         expected_private_leasing_lobby_url = "https://freesbe.com/private-leasing"
@@ -42,7 +42,7 @@ class Header_Component:
     def Clicking_on_a_Used_lobby_button(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, Rental_web, Solutions_page, My_leasing_web, Contact_us_page, wishlist_page = self.Header_locators()
         print('Clicking_on_a_Used_lobby_button start')
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         Used_car_lobby.click()
         Base.long_waiting(self)
         expected_Used_lobby_url = "https://freesbe.com/used-car-for-sale"
@@ -54,7 +54,7 @@ class Header_Component:
     def Move_to_rental_web(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, Rental_web, Solutions_page, My_leasing_web, Contact_us_page, wishlist_page = self.Header_locators()
         print('Move_to_rental_web start')
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         Rental_web.click()
         Base.long_waiting(self)
         tabs = self.driver.window_handles
@@ -68,7 +68,7 @@ class Header_Component:
     def Clicking_on_a_charging_solutions_button(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, Rental_web, Solutions_page, My_leasing_web, Contact_us_page, wishlist_page = self.Header_locators()
         print("Clicking_on_a_charging_solutions_button start")
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         Base.Hovering(self,Solutions_page)
         Funding_page = self.driver.find_element(By.XPATH,"//*[@id=\"__next\"]/div[1]/div/div[2]/div[1]/div/nav/div[5]/div[2]/div[2]/nav/div[1]/div/a")
         Funding_page.click()
@@ -102,7 +102,7 @@ class Header_Component:
     def Clicking_on_contact_us_button(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, Rental_web, Solutions_page, My_leasing_web, Contact_us_page, wishlist_page = self.Header_locators()
         print("Clicking_on_contact_us_button start")
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         Base.Hovering(self,Contact_us_page)
         our_locations = self.driver.find_element(By.XPATH,"//*[@id=\"__next\"]/div[1]/div/div[2]/div[1]/div/nav/div[7]/div[2]/div[2]/nav/div[2]/div/a/p")
         our_locations.click()
@@ -132,7 +132,7 @@ class Header_Component:
     def Clicking_on_wishlist_page(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, Rental_web, Solutions_page, My_leasing_web, Contact_us_page, wishlist_page = self.Header_locators()
         print('Clicking_on_wishlist_page start')
-        self.driver.implicitly_wait(10)
+        Base.long_waiting(self)
         wishlist_page.click()
         Base.long_waiting(self)
         expected_wishlist_page_url = 'https://freesbe.com/wishlist'

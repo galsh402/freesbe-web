@@ -18,7 +18,7 @@ class Base:
         self.driver.implicitly_wait(20)
 
     def long_waiting(self):
-        time.sleep(3.5)
+        time.sleep(4.5)
 
     def Short_waiting(self):
-        time.sleep(1)
+        time.sleep(1.5)

@@ -41,7 +41,7 @@ def test_Search_flow(driver):
     driver.implicitly_wait(2)
     Search.Clicking_on_a_general_Search()
 
-#UI test + Sanity test (scroll and move to additional services pages)
+#Sanity test (scroll and move to additional services pages)
 
 def test_Additional_services(driver):
     driver.get(Homepage_url)
@@ -59,12 +59,12 @@ def test_Additional_services(driver):
 def test_component_contact_us(driver):
     driver.get(Homepage_url)
     Contact_us = Contact_Us_Component(driver)
-    Contact_us.Clicking_on_a_contact_us_button()
+    Contact_us.Clicking_on_a_contact_us_buttons()
 
 #Sanity test (scroll dwon and open the blog page)
 
-#def test_blog_component(driver):
-#    driver.get(Homepage_url)
-#    Blog_page = Blog_Component(driver)
-#    Blog_page.navigate_to_blog_page()
-#    driver.implicitly_wait(2)
+def test_blog_component(driver):
+    driver.get(Homepage_url)
+    Blog_page = Blog_Component(driver)
+    Blog_page.navigate_to_blog_page()
+    driver.implicitly_wait(2)
