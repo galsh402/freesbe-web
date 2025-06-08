@@ -14,7 +14,6 @@ class Hero_Component:
 
     def Clicking_on_a_New_lobby_button(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, rental_web = self.Hero_locators()
-        print(' Clicking_on_a_New_lobby_button start')
         Base.long_waiting(self)
         New_car_lobby.click()
         Base.long_waiting(self)
@@ -22,11 +21,9 @@ class Hero_Component:
         assert expected_new_lobby_url in self.driver.current_url
         self.driver.back()
         self.driver.implicitly_wait(10)
-        print(' Clicking_on_a_New_lobby_button end')
 
     def Clicking_on_a_private_leasing_lobby_button(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, rental_web = self.Hero_locators()
-        print('Clicking_on_a_private_leasing_lobby_button start')
         Base.long_waiting(self)
         Leasing_car_lobby.click()
         Base.long_waiting(self)
@@ -34,11 +31,9 @@ class Hero_Component:
         assert expected_private_leasing_lobby_url in self.driver.current_url
         self.driver.back()
         self.driver.implicitly_wait(10)
-        print('Clicking_on_a_private_leasing_lobby_button end')
 
     def Clicking_on_a_Used_lobby_button(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, rental_web = self.Hero_locators()
-        print('Clicking_on_a_Used_lobby_button start')
         Base.long_waiting(self)
         Used_car_lobby.click()
         Base.long_waiting(self)
@@ -46,11 +41,9 @@ class Hero_Component:
         assert expected_Used_lobby_url in self.driver.current_url
         self.driver.back()
         self.driver.implicitly_wait(10)
-        print('Clicking_on_a_Used_lobby_button end')
 
     def Move_to_rental_web(self):
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, rental_web = self.Hero_locators()
-        print('Move_to_rental_web start')
         Base.long_waiting(self)
         rental_web.click()
         Base.long_waiting(self)
@@ -60,4 +53,3 @@ class Hero_Component:
         assert expected_rental_web in self.driver.current_url
         self.driver.close()
         self.driver.switch_to.window(tabs[0])
-        print('Move_to_rental_web end')

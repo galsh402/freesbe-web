@@ -6,16 +6,15 @@ class Contact_Us_Component:
         self.driver: WebDriver = driver
 
     def Contact_Us_locators(self):
-        Contact_Us = self.driver.find_element(By.XPATH,"//*[@id=\"__next\"]/div[2]/section[3]/div")
-        Phone_button = self.driver.find_element(By.XPATH,"//*[@id=\"__next\"]/div[2]/section[3]/div/div[2]/button[1]")
+        Phone_button = self.driver.find_element(By.XPATH,"//*[@id=\"__next\"]/div[2]/section[3]/div/div[2]/button[1]/p")
         phone_number = self.driver.find_element(By.XPATH,"//*[@id=\"__next\"]/div[2]/section[3]/div/div[2]/button[1]/p")
-        return Contact_Us, Phone_button, phone_number
+        return Phone_button, phone_number
 
     def Clicking_on_a_contact_us_buttons(self):
-        Contact_Us, Phone_button, phone_number = self.Contact_Us_locators()
+        Phone_button, phone_number = self.Contact_Us_locators()
         print('Clicking_on_a_contact_us_button start')
         Base.long_waiting(self)
-        Base.scrolling(self, Contact_Us)
+        Base.scrolling(self, Phone_button)
         Phone_button.click()
         Base.long_waiting(self)
         expected_phone_number = '077-8040834'

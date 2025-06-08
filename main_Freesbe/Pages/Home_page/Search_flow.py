@@ -14,7 +14,6 @@ class Search_flow_Component:
 
     def Clicking_on_a_monthly_price(self):
         Search_flow_main_title, monthly_price, accurate_search, general_Search = self.Search_flow_locators()
-        print('Clicking_on_a_monthly_price start')
         Base.long_waiting(self)
         Base.scrolling(self, monthly_price)
         Base.long_waiting(self)
@@ -24,11 +23,9 @@ class Search_flow_Component:
         assert expected_budget_page_url in self.driver.current_url
         self.driver.back()
         self.driver.implicitly_wait(10)
-        print('Clicking_on_a_budget_button end')
 
     def Clicking_on_a_accurate_Search(self):
         Search_flow_main_title, monthly_price, accurate_search, general_Search = self.Search_flow_locators()
-        print('Clicking_on_a_accurateSearch_button start')
         Base.long_waiting(self)
         Base.scrolling(self, accurate_search)
         accurate_search.click()
@@ -37,11 +34,9 @@ class Search_flow_Component:
         assert expected_accurateSearch_page_url in self.driver.current_url
         self.driver.back()
         self.driver.implicitly_wait(10)
-        print('Clicking_on_a_Search_flow_component end')
 
     def Clicking_on_a_general_Search(self):
         Search_flow_main_title, monthly_price, accurate_search, general_Search = self.Search_flow_locators()
-        print('Clicking_on_a_general_Search start')
         Base.scrolling(self,general_Search)
         general_Search.click()
         Base.long_waiting(self)
@@ -49,4 +44,3 @@ class Search_flow_Component:
         assert expected_leave_details_page_url in self.driver.current_url
         self.driver.back()
         self.driver.implicitly_wait(10)
-        print('Clicking_on_a_general_Search end')
