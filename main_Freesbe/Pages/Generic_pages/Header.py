@@ -61,7 +61,8 @@ class Header_Component:
         New_car_lobby, Leasing_car_lobby, Used_car_lobby, Rental_web, Solutions_page, My_leasing_web, Contact_us_page, wishlist_page = self.Header_locators()
         Base.long_waiting(self)
         Base.Hovering(self,Solutions_page)
-        Funding_page = self.driver.find_element(By.XPATH,"//*[@id=\"__next\"]/div[1]/div/div[2]/div[1]/div/nav/div[5]/div[2]/div[2]/nav/div[1]/div/a")
+        Base.Short_waiting(self)
+        Funding_page = self.driver.find_element(By.XPATH,"//*[@id=\"__next\"]/div[1]/div/div[2]/div[1]/div/nav/div[5]/div[1]/div[1]/nav/div[1]/div/a")
         Funding_page.click()
         Base.long_waiting(self)
         expected_funding_page_url = "https://freesbe.com/finance"
